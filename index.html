@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task #1</title>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body dir="rtl"> 
+    <div class="container">
+     <h2>ویرایش اطلاعات</h2>
+     <button onclick="modal()">ویرایش</button>
+     
+        <div class="backdrrop hidden">
+            <div class="modal">
+               <div class="modal__header">
+                  <span id="close" onclick="closeModal()">❌</span>
+                  <p>مشخصات کاربری</p>                  
+                </div>
+                <div class="modal__body">
+                    <form  action="">
+                        <div class="modall">
+                            <div class="form__control">
+                                <label for="name"> نام </label>
+                                <input type="text" name="name" id="name" />
+                            </div>
+                            <div class="form__control">
+                                <label for="lname" > نام خانوادگی</label>
+                                <input type="text" id="lname" />
+                            </div>
+                            <div class="form__control">
+                                <label for="email" >ایمیل</label>
+                                <input type="email" id="email" />
+                            </div>
+                            <div class="form__control">
+                                <label for="tel">تلفن</label>
+                                <input type="text" id="tel" />
+                            </div>
+                            <div class="form__control">
+                                <label for="address">آدرس</label>
+                                <input type="text"  id="address"/>
+                            </div>
+                            <div class="form__control">
+                                <label for="postalCode">کدپستی</label>
+                                <input type="text" id="postalCode" />
+                            </div>
+                            <button class="btn btn-success">تایید</button>
+                            <button class="btn btn-cancel">انصراف</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function modal()
+        {
+            document.querySelector('.backdrrop').classList.remove('hidden')
+        }
+
+        function closeModal()
+        {
+            document.querySelector('.backdrrop').classList.add('hidden')
+        }
+
+    </script>
+</body>
+</html>

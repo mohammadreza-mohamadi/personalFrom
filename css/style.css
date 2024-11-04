@@ -1,0 +1,175 @@
+
+
+@font-face {
+    font-family: 'vazir';
+    src: url('../assets/fonts/Vazirmatn[wght].woff2') format('woff2'),
+         url('../assets/fonts/Vazirmatn-Thin.woff2') format('woff2')
+         url('../assets/fonts/Vazirmatn-SemiBold.woff2') format('woff2')
+         url('../assets/fonts/Vazirmatn-Regular.woff2') format('woff2')
+         url('../assets/fonts/Vazirmatn-Medium.woff2') format('woff2')
+         url('../assets/fonts/Vazirmatn-Light.woff2') format('woff2')
+         url('../assets/fonts/Vazirmatn-ExtraLight.woff2') format('woff2')
+         url('../assets/fonts/Vazirmatn-Bold.woff2') format('woff2')
+         url('../assets/fonts/Vazirmatn-Black.woff2') format('woff2')
+         url('../assets/fonts/Vazirmatn-ExtraBold.woff2') format('woff2');
+
+}
+
+:root
+{
+    --white-color : #fff;
+    --gray-color : #9ca3af;
+    --red-color : #f00;
+    --darkRed-color : #b30000;
+    --lightGreen-color : rgb(65, 207, 9);
+    --darkBlue-color : #3b3bc7;
+    --darkGray-color : #5b5656;
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'vazir';
+}
+html{
+    font-size: 62.5%;
+   
+}
+ .container
+ {
+    height:100vh;
+    background-image: url('../assets/img/bgi.jpg');
+ }
+
+ .backdrrop
+ {
+    height:100vh;
+    backdrop-filter: blur(5px);
+    -webkit-backdrrop-filter: blur(5px);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .modal
+ {
+    width:calc(90% - 3rem);
+    height:calc(60% - 5rem);
+    background-color: var(--white-color);
+    overflow-y : auto;
+ }
+ 
+ .modal__header
+ {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:5rem;
+    border-bottom: 1px solid var(--darkGray-color);
+    padding-bottom:1rem;
+    
+ }
+
+ .modal__header p{
+     flex-grow: 1;
+     text-align: center;
+     font-size: 2.4rem;
+     font-weight: 700;
+     color: var(--darkBlue-color);
+ }
+
+ span{
+    font-size: 2.4rem;
+ }
+
+ .modal__body
+ {
+    height:calc(95% - 6rem);
+    width: calc(95% - 4rem);
+ }
+
+ .modall
+ {
+    margin: 1.6rem 1.6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap : 2.4rem;
+ }
+
+ .form__control
+ {
+    grid-column:1/-1; 
+    position: relative;
+ }
+
+
+
+ .form__control input{
+    position: absolute;
+    right: calc(15%);
+    padding:0.5rem 0.7rem;
+    border-radius: 5px;
+    outline: 0;
+    border : 1px solid #fae8ff;
+    /* margin-bottom: 1.6rem; */
+ }
+
+ input:focus{
+    /* border-color: #f0abfc; */
+    box-shadow: 0 0 5px 5px #f0abfc;
+ }
+
+ .btn
+ {
+    height:3rem;
+    border-radius: 5px;
+    font-size: 1.8rem;
+    border : none
+ }
+
+ .btn-success
+ {
+    background-color: var(--lightGreen-color);
+ }
+
+ .hidden
+ {
+    display:none;
+ }
+ @media screen and (min-width : 768px)
+ {
+    .modal{
+        height:calc(55% - 6rem);
+        width:calc(70% - 6rem);
+    }
+    .form__control
+    {
+        grid-column: span 1;
+    }
+
+ }
+
+
+ ::-webkit-scrollbar {
+width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px var(--gray-color); 
+border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: var(--red-color);
+border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: var(--darkRed-color);
+}
